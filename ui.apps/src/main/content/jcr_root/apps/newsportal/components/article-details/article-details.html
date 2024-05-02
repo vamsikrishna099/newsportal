@@ -1,0 +1,19 @@
+<sly data-sly-use.writerInfoObj="writer-info.html"/>
+
+<sly data-sly-call="${writerInfoObj.writerInfo @fName='vamsi', email='suragani045@' ,descrp='here comes the new writer'}"/>
+
+
+<div data-sly-test="${properties.articleTitile}">
+    <h1> ${properties.articleTitile} </h1>
+    <h2> ${properties.articleDesc} </h2>
+    <img data-sly-test="${properties.articleImage}" src="${properties.articleImage}" />
+    <sly data-sly-list.nameslist="${properties.articlenames}">
+    	<ul data-sly-test="${nameslistList.middle}">
+        <li>${nameslist}</li>
+        </ul>
+    </sly>
+</div>
+
+<sly data-sly-call="${writerInfoObj.writerInfo @fName='Krishna ', email='krishna.s@emial' ,descrp='here comes the new writer'}"/>
+
+

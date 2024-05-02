@@ -1,0 +1,19 @@
+ <!-- Top Bar Start -->
+ <div class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="tb-contact">
+                    <p><i class="fas fa-envelope"></i>${properties.email}</p>
+                    <p><i class="fas fa-phone-alt"></i>${properties.phone}</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tb-menu"  data-sly-list.path="${properties.pagePath}">
+                    <sly data-sly-use.rightPages="${path}/jcr:content" />
+                        <a href="${path}.html">${rightPages.jcr:title}</a>  
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

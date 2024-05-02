@@ -1,0 +1,8 @@
+<div class="footer-widget">
+    <h3 class="title">${properties.title}</h3>
+    <ul data-sly-list.nav="${properties.pagePath}">
+        <sly data-sly-use.contentResource="${nav}/jcr:content" />
+        <li><a href="${nav}.html">${contentResource.jcr:title}</a></li>
+        
+    </ul>
+</div>
