@@ -16,16 +16,6 @@
                         sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
                         fieldLabel="Title"
                         name="./title"/>
-                    <path-links
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
-                        fieldLabel="Path Links">
-                        <field
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
-                            name="./pathLinks"
-                            rootPath="[/content/newsportal/us/en]"/>
-                    </ath-links>
                 </items>
             </column>
         </items>

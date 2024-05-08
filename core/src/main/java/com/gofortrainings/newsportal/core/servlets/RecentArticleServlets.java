@@ -5,10 +5,8 @@ import org.apache.sling.api.SlingHttpServletResponse;
 import org.apache.sling.api.resource.Resource;
 import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.api.servlets.SlingAllMethodsServlet;
-import org.apache.sling.servlets.annotations.SlingServletPaths;
 import org.apache.sling.servlets.annotations.SlingServletResourceTypes;
 import org.osgi.service.component.annotations.Component;
-import org.osgi.service.resolver.Resolver;
 
 import javax.servlet.Servlet;
 import javax.servlet.ServletException;
@@ -22,39 +20,36 @@ import java.util.Map;
 public class RecentArticleServlets extends SlingAllMethodsServlet {
 
     @Override
-    protected void doGet(SlingHttpServletRequest request,SlingHttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
         response.getWriter().write("response from path based servlet - do get.");
 
     }
 
     @Override
-    protected void doPost(SlingHttpServletRequest request,SlingHttpServletResponse response) throws ServletException, IOException {
+    protected void doPost(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
 
         ResourceResolver resolver = request.getResourceResolver();
         Resource userresource = resolver.getResource("/content/users");
-        Map<String,Object> props= new HashMap<>();
+        Map<String, Object> props = new HashMap<>();
 
-        props.put("firstName" ,"krishna999");
-        props.put("lastName" ,"vamsi");
-        props.put("email" ,"krishna999@gmail");
-        props.put("phone" ,"12345");
+        props.put("firstName", "krishna999");
+        props.put("lastName", "vamsi");
+        props.put("email", "krishna999@gmail");
+        props.put("phone", "12345");
 
-        resolver.create(userresource,"krishna0999",props);
+        resolver.create(userresource, "krishna0999", props);
         resolver.commit();
         response.getWriter().write("node created successfully.");
-
     }
 
     @Override
-    protected void doPut(SlingHttpServletRequest request,SlingHttpServletResponse response) throws ServletException, IOException {
+    protected void doPut(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
         response.getWriter().write("response from path based servlet - do put.");
-
     }
 
     @Override
-    protected void doDelete(SlingHttpServletRequest request,SlingHttpServletResponse response) throws ServletException, IOException {
+    protected void doDelete(SlingHttpServletRequest request, SlingHttpServletResponse response) throws ServletException, IOException {
         response.getWriter().write("response from path based servlet - do delete.");
-
     }
 
 
