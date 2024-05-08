@@ -15,14 +15,14 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                         fieldLabel="Logo"
-                        rootPath="/content/dam/newsportal/images"
-                        name="./logo"/>
+                        name="./logo"
+                        rootPath="/content/dam/newsportal/images"/>
                     <logo-link
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                         fieldLabel="Logo Link"
-                        rootPath="/content/newsportal/us"
-                        name="./logolink"/>
+                        name="./logolink"
+                        rootPath="/content/newsportal/us"/>
                 </items>
             </column>
         </items>

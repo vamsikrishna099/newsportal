@@ -1,7 +1,8 @@
  <sly data-sly-use.articleModel="com.gofortrainings.newsportal.core.models.AriticleDetailsModel"/>
 
 <sly data-sly-test="${!articleModel.articleExipired}">
+	<img data-sly-test="${articleModel.articleImage}" src="${articleModel.articleImage}" />	
     <h1> ${articleModel.articleTitle} </h1>
     <h2> ${articleModel.articleDesc @context='html'} </h2>
-    <img data-sly-test="${articleModel.articleImage}" src="${articleModel.articleImage}" />
+    
 </sly>

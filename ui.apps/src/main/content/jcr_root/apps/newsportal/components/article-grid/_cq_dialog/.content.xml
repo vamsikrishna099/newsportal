@@ -25,7 +25,8 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
                         fieldLabel="Article Image"
-                        name="./articleImage"/>
+                        name="./articleImage"
+                        rootPath="/content/dam/newsportal"/>
                     <article-names
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="granite/ui/components/coral/foundation/form/multifield"
